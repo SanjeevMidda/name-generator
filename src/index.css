@@ -1,0 +1,174 @@
+* {
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  transition: all 500ms;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(181, 235, 255, 1) 100%
+  );
+}
+
+h1 {
+  margin: 10px;
+  animation: titleAnimation 1s;
+}
+
+.generateNewName {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.656);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  animation: generateNewNameAnimation 1s;
+
+  img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.generateNewName:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.264);
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+  animation: initialContentAnimation 1s;
+}
+
+.line {
+  width: 1px;
+  height: 400px;
+  background: black;
+}
+
+#girl {
+  animation: girlAnimation 1s;
+}
+
+#boy {
+  animation: boyAnimation 1s;
+}
+
+@keyframes initialContentAnimation {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes girlAnimation {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes boyAnimation {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes generateNewNameAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes nameAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes imageAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.selectGender {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+h3 {
+  font-size: 100px;
+  animation: nameAnimation 1s;
+  margin-bottom: 20px;
+}
+
+.boyContainer,
+.girlContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#girlImage {
+  width: 110%;
+  height: 110%;
+}
+
+img {
+  animation: imageAnimation 1s;
+}
